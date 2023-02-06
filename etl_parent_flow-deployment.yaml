@@ -1,0 +1,56 @@
+###
+### A complete description of a Prefect Deployment for flow 'Ingest Data | Master Flow'
+###
+name: Parameterized ETL MM
+description: null
+version: 1ee058ce9fd0ea7b8ab3e95a9b693458
+# The work queue that will handle this deployment's runs
+work_queue_name: default
+tags: []
+parameters: {"color":"yellow","months":[2,3],"year":2019}
+schedule: null
+infra_overrides: {}
+infrastructure:
+  type: process
+  env: {}
+  labels: {}
+  name: null
+  command: null
+  stream_output: true
+  working_dir: null
+  block_type_slug: process
+  _block_type_slug: process
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: Ingest Data | Master Flow
+manifest_path: null
+storage: null
+path: C:\Users\stude\Documents\Zoomcamp DE\Week 2\Prefect\prefect-zoomcamp
+entrypoint: flows\03_deployments\parameterized_flow.py:etl_parent_flow
+parameter_openapi_schema:
+  title: Parameters
+  type: object
+  properties:
+    months:
+      title: months
+      default:
+      - 1
+      - 2
+      position: 0
+      type: array
+      items:
+        type: integer
+    year:
+      title: year
+      default: 2021
+      position: 1
+      type: integer
+    color:
+      title: color
+      default: yellow
+      position: 2
+      type: string
+  required: null
+  definitions: null
