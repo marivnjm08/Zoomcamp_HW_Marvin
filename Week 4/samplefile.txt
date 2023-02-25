@@ -1,0 +1,26 @@
+
+--Q1
+SELECT count(*) as records
+from fact_trips
+where extract(year from cast(pickup_datetime as date)) between 2019 and 2020
+
+
+
+--Q2
+https://lookerstudio.google.com/reporting/9789ceed-5b4d-4045-b352-18d49e5d9a36
+
+
+
+--Q3
+SELECT count(*) as records
+from stg_fhv_tripdata
+
+
+--Q4
+SELECT count(*) as records
+from fact-fhv
+
+
+
+--Q5
+https://lookerstudio.google.com/reporting/9789ceed-5b4d-4045-b352-18d49e5d9a36
